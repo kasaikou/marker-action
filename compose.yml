@@ -1,0 +1,8 @@
+services:
+  test:
+    build: .
+    volumes:
+      - .:/workspace
+    environment:
+      - GITHUB_WORKSPACE=/workspace
+    command: nihonkokukenpou.pdf nihonkokukenpou.md 500 Japanese
