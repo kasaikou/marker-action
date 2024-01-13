@@ -1,0 +1,20 @@
+name: 
+description: Convert from PDF or EPUB to Markdown with 
+inputs:
+  source:
+    description: Source filename
+    required: true
+  dest:
+    description: Destination filename
+    required: true
+  language:
+    description: Default language (English, Japanese, Chinese, etc...)
+    required: false
+    default: English
+runs:
+  using: docker
+  image: ghcr.io/kasaikou/marker-action:latest
+  args: [ "${{ inputs.source }}", "${{ inputs.dest }}", "${{ inputs.language }}"]
+branding:
+  icon: printer
+  color: red
