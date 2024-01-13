@@ -24,7 +24,7 @@ jobs:
           docker build .
           -t ${{ env.CONTAINER_REPOSITORY }}:latest
       - name: docker/login
-        run: |
+        run: >
           docker login ghcr.io
           --username ${{ github.repository_owner }}
           --password ${{ secrets.GITHUB_TOKEN }}
