@@ -31,4 +31,4 @@ COPY load_models.py .
 RUN .venv/bin/python load_models.py
 
 COPY entrypoint.sh .
-ENTRYPOINT ["/bin/sh", "entrypoint.sh"]
+ENTRYPOINT ["/bin/sh", "/src/marker/entrypoint.sh"]
