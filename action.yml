@@ -13,7 +13,7 @@ inputs:
     default: English
 runs:
   using: docker
-  image: ghcr.io/kasaikou/marker-action:latest
+  image: docker://ghcr.io/kasaikou/marker-action:latest
   args: [ "${{ inputs.source }}", "${{ inputs.dest }}", "${{ inputs.language }}"]
 branding:
   icon: printer
