@@ -1,7 +1,7 @@
 on:
   push:
     paths:
-      - .github/workflows/build-image.yml
+      - .github/workflows/build-image-latest.yml
       - Dockerfile
       - entrypoint.sh
       - load_models.py
